@@ -1,10 +1,10 @@
 # Rupal Photo Studio
 
-Wedding photography by Rajesh Aire, with 26 years of continuous photography experience. Chakala, Andheri East, Mumbai.
+Traditional photography by Rajesh Aire, with over three decades dedicated to the craft. He established Rupal Photo Studio in 2006 in Chakala, Andheri East, Mumbai.
 
 **Website:** https://kartikmore04.github.io/
 
-The website includes the complete Ashwin & Chetna album (37 layouts), Rahul & Kirti album (40 layouts), a photograph gallery, studio services, Google Map and direct phone contact.
+The website uses the studio’s supplied camera symbol and wordmark and includes the complete Ashwin & Chetna album (37 layouts), Rahul & Kirti album (40 layouts), a photograph gallery, studio services, Google Map and direct phone contact.
 
 ## Publishing
 
