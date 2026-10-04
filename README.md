@@ -1,6 +1,6 @@
 # Rupal Photo Studio
 
-Wedding photography by Rajesh Aayre, with 26 years of continuous photography experience. Chakala, Andheri East, Mumbai.
+Wedding photography by Rajesh Aire, with 26 years of continuous photography experience. Chakala, Andheri East, Mumbai.
 
 **Website:** https://kartikmore04.github.io/
 
