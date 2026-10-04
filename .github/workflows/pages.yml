@@ -1,0 +1,48 @@
+name: Publish Rupal Photo Studio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.zip'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout website archives
+        uses: actions/checkout@v6
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Assemble the complete website
+        run: |
+          mkdir -p site
+          for archive in site-core.zip site-albums-*.zip; do
+            unzip -q "$archive" -d site
+          done
+          test -f site/index.html
+          test -f site/.nojekyll
+          test "$(find site/albums/ashwin-chetna/spreads -name '*.webp' | wc -l)" -eq 37
+          test "$(find site/albums/rahul-kirti/spreads -name '*.webp' | wc -l)" -eq 40
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
